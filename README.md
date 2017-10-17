@@ -661,7 +661,7 @@ verify_from_tip(tip_block_hash: [32]byte):
 `cfheaders` メッセージは以下のように定義される。
 
 | Field Size | Description | データ型 | コメント |
-| :-- | :-- | :-- | :-- | :-- |
+| :-- | :-- | :-- | :-- |
 | 32 | StopHash | []byte | 終端のハッシュ |
 | 1 | FilterType | byte | リクエスト対象のフィルタヘッダーのタイプ |
 | Var-Int | NumHeaders | uint64 | 送信するヘッダーの数 |
