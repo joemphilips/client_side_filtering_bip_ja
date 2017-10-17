@@ -2,17 +2,21 @@
 categories: ["Develop with pleasure!", "cryptocurrency","translation"]
 date: 2017-10-16T12:39:35+09:00
 # description: "filter header chain by roasbeef"
-draft: false
+# draft: false
 tags: ["bitcoin"]
 title: "既存のSPVウォレットの問題点を解消するフィルタヘッダーチェーンについて"
 ---
 
+# 既存のSPVウォレットの問題点を解消するフィルタヘッダーチェーンについて
+
 lightninglabsから[neutrino](https://github.com/lightninglabs/neutrino)という新しい
 ライトクライアントが出てきたので、その仕組みの元になったroasbeefの
-[pre-BIP](https://github.com/Roasbeef/bips/blob/master/gcs_light_client.mediawiki)
+[pre-BIP](https://github.com/roasbeef/bips/blob/master/gcs_light_client.mediawiki)
 を訳す。レイヤー２対応のライトクライアントとして都合が良い仕組みにすることが目標らしい。
-まだBIPになっていないので、変更はあるかもしれない。随時対応していく所存。
+まだBIPになっていないけど面白そうだったので翻訳した。
+変更はあるかもしれないので随時対応していくかも。
 
+もとの文書は[こちら](https://github.com/roasbeef/bips/blob/master/gcs_light_client.mediawiki)
 
 ## アブストラクト
 
@@ -770,4 +774,4 @@ Golomb Coded Setsはhttp2のサーバープッシュにおいてキャッシン�
 とはいえ接続先ノードへの信頼を減らせるので良さげ。
 
 そもそもlayer2でプライバシーを担保するというのは技術的課題が多すぎてつらいということがわかる。
-プライバシー保護ガチ勢には頑張ってほしい。
+プライバシー保護ガチ勢には頑張ってほしい(他力本願)。
