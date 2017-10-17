@@ -188,14 +188,14 @@ n = (q*m) + r
 ではゴロム・ライス符号によるエンコード・デコードを行うシンプルな関数を定義する。これらの
 関数は次以降のセクションでコンパクトフィルタを作成するための材料となる。
 
-```python
+```
 golomb_encode(stream, n, k):
     let q = n >> k
     unary_encode(stream, q)
     write_bits_big_endian(stream, n, k)
 ```
 
-```python
+```
 golomb_decode(stream, k) -> int:
     let c = stream.read_bit()
 
@@ -272,7 +272,7 @@ n  = (q, r) = c
 
 以下のルーティンで上記のパラメータから未圧縮の集合を作り出す。
 
-```python
+```
 hashed_set_construct(N, P, raw_items, k): -> []uint64:
     let F = N * P
 
@@ -297,7 +297,7 @@ hashed_set_construct(N, P, raw_items, k): -> []uint64:
 
 以下のルーティンで圧縮のプロセスを示す。
 
-```python
+```
 gcs_compress(sorted_set, fp) -> []byte:
     let stream = new_bit_stream()
 
@@ -381,7 +381,7 @@ gcs_match(key: [16]byte, compressed_set: []byte, target: []byte, fp, N: int) -> 
 リストとは逐次的に解凍された集合とクエリ対象となる要素のリストである。
 以下のルーティンは探索対象となる要素集合が元の集合に含まれ**うる**場合に `true` を返す
 
-```python
+```
 gcs_match_any(key: [16]byte, compressed_set: []byte, targets [][]byte, 
               fp, N: int) -> bool:
 
@@ -584,7 +584,7 @@ construct_extended_gcs_filter(block, fp) -> []byte:
 
 特定のフィルタータイプに対応するフィルタヘッダーチェーンは以下の再帰処理で作成できる。
 
-```python
+```
 filter_header(n: uint) -> [32]byte = 
    let zero_hash [32]byte = {0..32}
 
@@ -615,7 +615,7 @@ filter_header(n: uint) -> [32]byte =
 さらに、chaintipの更新時に、新しく受け取ったフィルタの正当性の検証のため、(帯域幅の削減のため)
 各ピアからフィルタを受け取ることなくフィルタの検証を行う方法を以下に示す。
 
-```python
+```
 verify_from_tip(tip_block_hash: [32]byte):
     let filter_types = {supported_fitler_types...}
     let connected_peers = {list_of_connected_full_nodes...}
