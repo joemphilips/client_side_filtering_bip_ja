@@ -1,7 +1,7 @@
 ---
 categories: ["Develop with pleasure!", "cryptocurrency","translation"]
 date: 2017-10-16T12:39:35+09:00
-description: "filter header chain by roasbeef"
+# description: "filter header chain by roasbeef"
 draft: false
 tags: ["bitcoin"]
 title: "既存のSPVウォレットの問題点を解消するフィルタヘッダーチェーンについて"
